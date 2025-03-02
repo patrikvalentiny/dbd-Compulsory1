@@ -32,7 +32,7 @@ CREATE TABLE
     courses (
         id SERIAL PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
-        credits INT NOT NULL,
+        credits DECIMAL(5,2) NOT NULL,
         instructor_id INT NULL,
         FOREIGN KEY (instructor_id) REFERENCES instructors (id) ON DELETE SET NULL ON UPDATE CASCADE
     );
