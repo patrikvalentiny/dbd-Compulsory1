@@ -17,7 +17,7 @@ CREATE TABLE
         email VARCHAR(255) NOT NULL,
         hire_date DATE NOT NULL
     );
-    
+
 CREATE TABLE
     courses (
         id SERIAL PRIMARY KEY,
@@ -32,7 +32,7 @@ CREATE TABLE
         id SERIAL PRIMARY KEY,
         student_id INT NOT NULL,
         course_id INT NOT NULL,
-        grade INT,
+        final_grade INT,
         FOREIGN KEY (student_id) REFERENCES students (id) ON DELETE CASCADE ON UPDATE CASCADE,
         FOREIGN KEY (course_id) REFERENCES courses (id) ON DELETE CASCADE ON UPDATE CASCADE
     );

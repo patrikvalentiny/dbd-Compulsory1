@@ -1,0 +1,1 @@
+ALTER TABLE "public"."enrollments" RENAME COLUMN "grade" TO "final_grade";
