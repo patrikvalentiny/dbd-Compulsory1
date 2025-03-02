@@ -9,7 +9,6 @@ CREATE TABLE
         date_of_birth DATE NULL
     );
 
-
 CREATE TABLE
     instructors (
         id SERIAL PRIMARY KEY,
@@ -19,12 +18,15 @@ CREATE TABLE
         hire_date DATE NOT NULL
     );
 
-CREATE TABLE departments (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    budget NUMERIC(10, 2) NOT NULL,
-    start_date DATE NOT NULL
-);
+CREATE TABLE
+    departments (
+        id SERIAL PRIMARY KEY,
+        name VARCHAR(255) NOT NULL,
+        budget NUMERIC(10, 2) NOT NULL,
+        start_date DATE NOT NULL,
+        instructor_id INT NULL,
+        FOREIGN KEY (instructor_id) REFERENCES instructors (id) ON DELETE SET NULL ON UPDATE CASCADE
+    );
 
 CREATE TABLE
     courses (
@@ -44,4 +46,3 @@ CREATE TABLE
         FOREIGN KEY (student_id) REFERENCES students (id) ON DELETE CASCADE ON UPDATE CASCADE,
         FOREIGN KEY (course_id) REFERENCES courses (id) ON DELETE CASCADE ON UPDATE CASCADE
     );
-
