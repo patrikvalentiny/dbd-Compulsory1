@@ -3,7 +3,8 @@ CREATE TABLE students (
     first_name VARCHAR(255) NOT NULL,
     last_name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
-    enrollment_date DATE NOT NULL
+    enrollment_date DATE NOT NULL,
+    middle_name VARCHAR(255)
 );
 
 CREATE TABLE courses (

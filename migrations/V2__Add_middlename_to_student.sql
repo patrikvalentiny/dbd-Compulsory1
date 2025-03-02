@@ -1,0 +1,1 @@
+ALTER TABLE "public"."students" ADD COLUMN "middle_name" character varying(255) NULL;
