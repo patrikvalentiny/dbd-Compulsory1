@@ -1,0 +1,2 @@
+ -- modify "students" table:
+    -> ALTER TABLE "public"."students" ADD COLUMN "date_of_birth" date NULL;
