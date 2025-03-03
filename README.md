@@ -1,4 +1,7 @@
-# E5. Rename Grade attribute to FinalGrade in Enrollment
+# Change based approach
+Utilizing SQL scripts with Flyway for migrations
+
+## E5. Rename Grade attribute to FinalGrade in Enrollment
 Rename the Grade attribute to FinalGrade in the Enrollment relation.
 
 Argue why you have chosen destructive vs non-destructive approach to your schema changes.
@@ -27,7 +30,7 @@ END;
 - After a transition period, the grade column should be removed to clean up the schema and avoid confusion.
 
 
-# E7. Modify the Course Credits relation
+## E7. Modify the Course Credits relation
 If you've chosen to use integers for the Credits attribute, modify the type to decimal(5, 2) and vice versa.
 
 Argue why you have chosen destructive vs non-destructive approach to your schema changes.
